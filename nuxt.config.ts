@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/image'],
+  modules: ['@nuxt/image'],
   nitro: {
     prerender: {
       autoSubfolderIndex: false,

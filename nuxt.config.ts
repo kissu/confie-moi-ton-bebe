@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/image'],
   nitro: {
     prerender: {
-      autoSubfolderIndex: false
-    }
-  }
-})
+      autoSubfolderIndex: false,
+    },
+  },
+  image: {
+    cloudflare: {
+      baseURL: 'https://confie-moi-ton-bebe.pages.dev/',
+    },
+  },
+});

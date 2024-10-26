@@ -4,13 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/image'],
   nitro: {
+    preset: 'cloudflare-pages',
     prerender: {
       autoSubfolderIndex: false,
-    },
-  },
-  image: {
-    cloudflare: {
-      baseURL: 'https://confie-moi-ton-bebe.pages.dev/',
+      crawlLinks: true,
     },
   },
 });

@@ -1,8 +1,8 @@
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 export default antfu({
   vue: true,
-  // typescript: true,
+  typescript: true,
   formatters: {
     css: true,
     html: true,
@@ -12,7 +12,7 @@ export default antfu({
   stylistic: {
     indent: 2,
     quotes: 'single',
-    semi: false,
+    semi: true,
   },
 }, {
   rules: {
@@ -20,5 +20,6 @@ export default antfu({
     'vue/multi-word-component-names': 0,
     'unused-imports/no-unused-vars': 1,
     'no-console': 1,
+    'vue/first-attribute-linebreak': 0,
   },
-})
+});

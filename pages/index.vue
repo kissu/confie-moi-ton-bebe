@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const goFast = ref(false);
+
+function makeGoFast() {
+  console.log('nice here');
+  goFast.value = true;
+}
+</script>
+
 <template>
   <div class="relative flex flex-col items-center pt-16 max-w-3xl mx-auto">
     <NuxtImg format="avif" src="/avatar.png" class="rounded-full absolute h-56 z-10" />
@@ -8,15 +17,32 @@
     <br>
     <br>
     <br>
+
+    <p @mouseover="makeGoFast">
+      StackOverflow
+    </p>
+
+    <Particles class="border border-red-500" :accelerate="goFast" @mouseover="goFast = true"
+      @mouseleave="goFast = false">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
+      reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni
+      aspernatur
+      cumque natus.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
+      reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni
+      aspernatur
+      cumque natus.
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
+      reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni
+      aspernatur
+      cumque natus.
+    </Particles>
     <br>
     <br>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
-    reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni aspernatur
-    cumque natus.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
-    reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni aspernatur
-    cumque natus.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facere illum, exercitationem doloremque quo
     reprehenderit dolorem dolorum accusamus neque beatae? Dolorem officia minima amet quo voluptatibus magni aspernatur
     cumque natus.

@@ -18,17 +18,16 @@
     "titleBar.inactiveBackground": "#ff3d0099",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#ff3d00",
-  "eslint.useFlatConfig": true,
-  "tailwindCSS.experimental.classRegex": [
-    "tw`(.*?)`",
-    "tw\\('(.*?)'\\)",
-    "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
-  ],
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "editor.quickSuggestions": {
-    "strings": true
-  }
+  "peacock.color": "#ff3d00"
+  // "tailwindCSS.experimental.classRegex": [
+  //   "tw`(.*?)`",
+  //   "tw\\('(.*?)'\\)",
+  //   "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
+  // ],
+  // "files.associations": {
+  //   "*.css": "tailwindcss"
+  // },
+  // "editor.quickSuggestions": {
+  //   "strings": true
+  // }
 }

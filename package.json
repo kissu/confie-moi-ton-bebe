@@ -12,6 +12,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/icon": "^1.5.8",
     "@nuxt/image": "^1.8.1",
     "@unhead/vue": "^1.11.10",
     "nuxt": "^3.13.2",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "@iconify-json/logos": "^1.2.3",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-vue": "^9.29.1",
     "nitro-cloudflare-dev": "^0.2.1",

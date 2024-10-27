@@ -1,4 +1,4 @@
-import antfu from '@antfu/eslint-config';
+import antfu from '@antfu/eslint-config'
 
 export default antfu({
   vue: true,
@@ -12,7 +12,7 @@ export default antfu({
   stylistic: {
     indent: 2,
     quotes: 'single',
-    semi: true,
+    semi: false,
   },
 }, {
   rules: {
@@ -21,4 +21,4 @@ export default antfu({
     'unused-imports/no-unused-vars': 1,
     'no-console': 1,
   },
-});
+})

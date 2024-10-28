@@ -3,54 +3,47 @@ const props = withDefaults(defineProps<{
   accelerate?: boolean;
   color?: string;
 }>(), {
-  accelerate: false,
+  accelerate: true,
   color: '#e7700d',
 });
+
+const showSparkles = ref(false);
 </script>
 
 <template>
-  <div class="relative border-2 border-blue-500 border-opacity-5">
-    <!-- <ParticlesBackground :color="props.color" /> -->
-    <slot />
-    <div
-      class="stars absolute overflow-hidden w-screen mx-auto max-w-none h-48 -translate-x-1/2 transform-gpu pointer-events-none inset-x-0 bottom-0"
+  <div class="py-8 hover:text-orange-400 duration-700 transition-colors overflow-hidden"
+    @mouseover="showSparkles = true" @mouseleave="showSparkles = false">
+    <div class="flex items-center justify-center">
+      <slot />
+    </div>
+    <div v-show="showSparkles" class="stars overflow-hidden h-full transform-gpu pointer-events-none"
       :class="{ accelerate: props.accelerate }">
-      <div v-for="i in 3" :key="i" class="rounded-full bg-transparent" />
+      <div v-for="i in 3" :key="i" class="rounded-b-full" />
     </div>
   </div>
 </template>
 
 <style scoped>
 .stars {
-  left: 50%;
-  -webkit-mask-image: linear-gradient(180deg,
-      rgba(217, 217, 217, 0) 0%,
-      rgba(217, 217, 217, 0.8) 25%,
-      #d9d9d9 50%,
-      rgba(217, 217, 217, 0.8) 75%,
-      rgba(217, 217, 217, 0) 100%);
   mask-image: linear-gradient(180deg,
       rgba(217, 217, 217, 0) 0%,
       rgba(217, 217, 217, 0.8) 25%,
       #d9d9d9 50%,
       rgba(217, 217, 217, 0.8) 75%,
       rgba(217, 217, 217, 0) 100%);
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  transform: translate(-50%);
 
   --color: v-bind(props.color);
 }
 
 .stars>div {
   animation: risingStarsAnination linear infinite;
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
 }
 
 .stars.accelerate>div {
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
 }
 
 .stars div:nth-child(1) {
@@ -561,7 +554,7 @@ const props = withDefaults(defineProps<{
 
 .stars.accelerate div:nth-child(1) {
   opacity: 1;
-  animation-duration: 10s !important;
+  animation-duration: 5s !important;
 }
 
 .stars div:nth-child(2) {

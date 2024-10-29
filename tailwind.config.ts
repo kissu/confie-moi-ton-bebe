@@ -13,6 +13,30 @@ export default {
         scary: ['Nanum Brush Script'],
         painter: ['Painter'],
       },
+      animation: {
+        'skew-scroll': 'skew-scroll 15s linear infinite',
+        'fade-in': 'fade-in 1s forwards',
+      },
+      transitionDelay: {
+        2000: '2000ms',
+        4000: '4000ms',
+      },
+      keyframes: {
+        'skew-scroll': {
+          '0%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(40%)',
+          },
+          '100%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-50%)',
+          },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
       colors: {
         redish: '#FF006A',
         border: 'hsl(var(--border))',

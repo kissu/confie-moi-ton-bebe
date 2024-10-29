@@ -28,10 +28,10 @@ const DEFAULT_CONFIG: COBEOptions = {
   theta: 0.3,
   dark: 1,
   diffuse: 0.4,
-  mapSamples: 16000,
+  mapSamples: 8000,
   mapBrightness: 2,
   baseColor: [0, 0.5, 1],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  markerColor: [1, 0, 106 / 255],
   glowColor: [1.2, 1.2, 1.2],
   markers: [
     { location: [52.3676, 4.9041], size: 0.1 },
@@ -120,12 +120,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div :class="cn('absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]', $props.class)">
-    <canvas
-      ref="globeCanvasRef"
+    <canvas ref="globeCanvasRef"
       class="size-full opacity-0 transition-opacity duration-1000 ease-in-out [contain:layout_paint_size]"
       @pointerdown="(e) => updatePointerInteraction(e.clientX)" @pointerup="updatePointerInteraction(null)"
       @pointerout="updatePointerInteraction(null)" @mousemove="(e) => updateMovement(e.clientX)"
-      @touchmove="(e) => e.touches[0] && updateMovement(e.touches[0].clientX)"
-    />
+      @touchmove="(e) => e.touches[0] && updateMovement(e.touches[0].clientX)" />
   </div>
 </template>

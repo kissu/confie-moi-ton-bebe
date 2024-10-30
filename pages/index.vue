@@ -124,7 +124,7 @@ const div7Ref = ref(null);
           <div class="flex flex-row items-center justify-between">
             <div ref="div2Ref"
               class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black">
-              <NuxtImg src="/wtm.png" />
+              <img src="/wtm.png">
             </div>
             <!-- 🎯🎯 middle is here -->
             <div ref="div4Ref"
@@ -133,7 +133,7 @@ const div7Ref = ref(null);
             </div>
             <div ref="div6Ref"
               class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
-              <NuxtImg src="/lewagon.svg" />
+              <img src="/lewagon.svg">
             </div>
           </div>
           <div class="flex flex-row items-center justify-between">
@@ -143,7 +143,7 @@ const div7Ref = ref(null);
             </div>
             <div ref="div7Ref"
               class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
-              <NuxtImg src="/gitnation.png" class="h-24 object-contain" />
+              <img src="/gitnation.png" class="h-24 object-contain">
             </div>
           </div>
         </div>

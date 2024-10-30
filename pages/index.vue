@@ -60,6 +60,15 @@ const testimonials = [
 // Split testimonials into two rows
 const firstRow = ref(testimonials.slice(0, testimonials.length / 2));
 const secondRow = ref(testimonials.slice(testimonials.length / 2));
+
+const containerRef = ref(null);
+const div1Ref = ref(null);
+const div2Ref = ref(null);
+const div3Ref = ref(null);
+const div4Ref = ref(null);
+const div5Ref = ref(null);
+const div6Ref = ref(null);
+const div7Ref = ref(null);
 </script>
 
 <template>
@@ -86,7 +95,71 @@ const secondRow = ref(testimonials.slice(testimonials.length / 2));
       </TextHighlight>
     </h2>
 
-    <LazyInfiniteScroll class="mt-12 max-w-none border border-redish border-opacity-50" :items="placesIWorkedAt" />
+    <LazyInfiniteScroll class="mt-8 max-w-none border-t border-b border-redish border-opacity-50"
+      :items="placesIWorkedAt" />
+
+    <h2 class="text-4xl font-bold mt-72 text-transparent bg-gradient-to-r from-emerald-300 to-green-600 bg-clip-text">
+      Moi et la communauté
+    </h2>
+
+    <p class="text-xl mt-6 text-center max-w-xl">
+      Je contribue à pas mal d'endroits: que ce soit du mentoring, de l'organizationel de meetups/conférences en tant
+      que public speaker, commitee, MC etc...
+    </p>
+
+    <ClientOnly>
+      <div ref="containerRef"
+        class="relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg bg-background -mt-16 md:shadow-xl">
+        <div class="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
+          <div class="flex flex-row items-center justify-between">
+            <div ref="div1Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black">
+              <Icon name="devicon:vuejs" class="text-6xl" />
+            </div>
+            <div ref="div5Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
+              <Icon name="devicon:nuxtjs" class="text-6xl" />
+            </div>
+          </div>
+          <div class="flex flex-row items-center justify-between">
+            <div ref="div2Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black">
+              <NuxtImg src="/wtm.png" />
+            </div>
+            <!-- 🎯🎯 middle is here -->
+            <div ref="div4Ref"
+              class="z-10 flex size-16 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
+              <Icon name="mdi:cards-heart" class="bg-green-400 text-4xl" />
+            </div>
+            <div ref="div6Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
+              <NuxtImg src="/lewagon.svg" />
+            </div>
+          </div>
+          <div class="flex flex-row items-center justify-between">
+            <div ref="div3Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black">
+              <Icon name="devicon:stackoverflow" class="text-4xl" />
+            </div>
+            <div ref="div7Ref"
+              class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]">
+              <NuxtImg src="/gitnation.png" class="h-24 object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div1Ref" :to-ref="div4Ref" :curvature="-75"
+          :end-y-offset="-10" />
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div2Ref" :to-ref="div4Ref" />
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div3Ref" :to-ref="div4Ref" :curvature="75"
+          :end-y-offset="10" />
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div5Ref" :to-ref="div4Ref" :curvature="-75"
+          :end-y-offset="-10" :reverse="true" />
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div6Ref" :to-ref="div4Ref" :reverse="true" />
+        <AnimatedBeam :container-ref="containerRef" :from-ref="div7Ref" :to-ref="div4Ref" :curvature="75"
+          :end-y-offset="10" :reverse="true" />
+      </div>
+    </ClientOnly>
 
     <h2 class="text-4xl font-bold mt-72">
       Mon massacre sur <span class="ml-2">💛</span> <span
@@ -95,7 +168,7 @@ const secondRow = ref(testimonials.slice(testimonials.length / 2));
       <Icon name="mdi:hand-saw" class="bg-orange-400" />
     </h2>
 
-    <div id="bento-grid" class="text-4xl !max-w-none w-fit z-0 text-slate-950 mt-12">
+    <div id="bento-grid" class="text-4xl !max-w-none w-fit z-0 text-slate-950 mt-8">
       <Particles class="speed-block since bg-transparent">
         Commencé en 2021
       </Particles>

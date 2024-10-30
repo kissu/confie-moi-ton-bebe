@@ -168,7 +168,7 @@ const div7Ref = ref(null);
       <Icon name="mdi:hand-saw" class="bg-orange-400" />
     </h2>
 
-    <div id="bento-grid" class="text-4xl !max-w-none w-fit z-0 text-slate-950 mt-8">
+    <div id="bento-grid" class="text-4xl !max-w-none w-fit z-30 text-slate-950 mt-8">
       <Particles class="speed-block since bg-transparent">
         Commencé en 2021
       </Particles>

@@ -20,6 +20,7 @@ export default {
       transitionDelay: {
         2000: '2000ms',
         4000: '4000ms',
+        10000: '10000ms',
       },
       keyframes: {
         'skew-scroll': {
